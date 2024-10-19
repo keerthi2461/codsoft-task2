@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #264653;
+      scroll-behavior: smooth; 
+    }
+    h1, h2, h3 {
+      margin-bottom: 20px;
+      color: #e76f51; 
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 50px 0;
+    }
+    nav {
+      background-color: #2a9d8f; 
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      padding: 15px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: inline-block;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+    nav ul li a:hover {
+      color: #f4a261; 
+    }
+    header {
+      background: #264653;
+      color: #fff;
+      padding: 50px 0; 
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    #about {
+      padding: 50px 0;
+      background-color: #f4a261; 
+      color: #264653;
+    }
+    .about-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .profile-img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+    .timeline {
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background: #264653; 
+    }
+    .timeline-entry {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 50%;
+      padding: 20px;
+      background-color: #e9c46a; 
+      color: #000;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .timeline-entry.right {
+      margin-left: 50%;
+      justify-content: flex-start;
+    }
+    .timeline-entry.left {
+      margin-left: 0;
+      justify-content: flex-end;
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: #264653; 
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-entry h3 {
+      margin-bottom: 5px;
+    }
+    #skills ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+    #skills li {
+      background: #264653; 
+      color: #fff;
+      padding: 5px;
+      border-radius: 15px;
+      width: 22%;
+      text-align: center;
+    }
+    #projects .project {
+      margin-bottom: 30px;
+    }
+    #resume, #certifications, #contact {
+      text-align: center;
+    }
+    #contact a {
+      color: #2a9d8f; 
+      text-decoration: none;
+    }
+    #contact a:hover {
+      color: #e76f51; 
+    }
+    footer {
+      background: #264653;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer p {
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-entry {
+        width: 100%;
+        margin-left: 40px;
+      }
+      .timeline-entry.left {
+        justify-content: flex-start;
+      }
+      .timeline-entry.right {
+        margin-left: 40px;
+      }
+      .timeline-circle {
+        left: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <header>
+    <div class="container">
+      <h1>Keerthi Veeravalli</h1>
+      <p>Web Devloper|Programmer</p>
+    </div>
+  </header>
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="image.jpg" alt="Your Image" class="profile-img">
+      <p>
+        Hi! !am Keerthi.<br> I am a passionate student and problem solver with a keen interest in web development,
+         particularly in front-end technologies. 
+         My journey in coding began with my participation in competitive programming on platforms like CodeChef,
+         where I have developed strong analytical and problem-solving skills.
+      </p>
+    </div>
+  </section>
+  <section id="education" class="container">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-entry left">
+        <div class="timeline-circle"></div>
+        <div>
+          <h3>Bachelor of Technology</h3>
+          <p>MLR Institute of Technology </p>
+          <p>Year of Graduation: 2026</p>
+        </div>
+      </div>
+      <div class="timeline-entry right">
+        <div class="timeline-circle"></div>
+        <div>
+          <h3>Intermediate(Class XII)</h3>
+          <p>Sri Chaitanya Junior Kalasala</p>
+          <p>Year of Graduation: 2022</p>
+        </div>
+      </div>
+      <div class="timeline-entry left">
+        <div class="timeline-circle"></div>
+        <div>
+          <h3>Class X </h3>
+          <p>Sri Chaitanya Techno School </p>
+          <p>Year of Graduation: 2020</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <ul>
+      <li>Java</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Python</li>
+      <li>MySQL</li>
+      <li>Data Structures and Algorithms</li>
+    </ul>
+  </section>
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>LANDING PAGE</h3>
+      <p>This landing page project, which combines artistic vision with technical accuracy, 
+        demonstrates my core HTML and CSS skills. It captures visitors' attention and successfully
+        conveys the brand's message since it is designed to be an interesting entry point.
+        A flexible grid arrangement is used in the responsive design to ensure excellent viewing on 
+        a range of devices. A compelling hero section, an educational about section, and a features 
+        section that succinctly summarizes services are important sections. The visual design makes 
+        use of a unified color scheme and fonts to improve legibility and complement the brand. 
+        Hover effects and other interactive aspects increase user engagement even further.
+        <br><br>
+        The project makes use of Bootstrap to provide a mobile-first design approach, JavaScript for interactivity, CSS3 for styling, and HTML5 for semantic structure.
+        </p>
+    </div>
+    <div class="project">
+      <h3>CALCULATOR</h3>
+      <p>The intuitive input of the user-friendly interface makes operations simple for users. 
+        The JavaScript code has strong error handling that gracefully handles erroneous inputs 
+        and operations, improving the user experience overall. 
+        JavaScript event listeners provide dynamic interaction by instantly responding to user input.
+      <br><br>Using HTML, CSS, and JavaScript, this project creates an interactive calculator application
+       with addition, subtraction, multiplication, and division among other fundamental arithmetic operations.
+    </p>
+    </div>
+  </section>
+  <section id="resume" class="container">
+    <h2>Resume</h2>
+    <a href="Kresume.pdf" target="_blank">Download Resume</a><br>
+    <a href="Data Structures and Algorithms Using Java - An Interactive Way.pdf" target="_blank"> Data Structures and Algorithms Using Java</a><br>
+    <a href="java_basic certificate.pdf" target="_blank">Java HackerRank</a>
+  </section>
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:youremail@example.com">keerthiveeravalli24@gmail.com</a></p>
+    <p>Phone: (123) 456-7890</p>
+  </section>
+  <footer>
+    <p>&copy; 2024 Keerthi Veeravalli. All rights reserved.</p>
+  </footer>
+</body>
+</html>
